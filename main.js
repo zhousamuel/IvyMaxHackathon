@@ -4,7 +4,13 @@ var b = document.getElementById("background");
 var context_back = b.getContext("2d");
 var a = document.getElementById("score_bar");
 var context_score = a.getContext("2d");
+var phrases =[
+    'Rob Pabrai Jobs Unknown',
+    'Defeat It hill',
+    'Summer get Quit',
+    'Hello Also With Quit'
 
+];
  
 
 var numOfTiles = 5;
@@ -15,7 +21,7 @@ var myTiles = [];
 var intervalTmp;
 var geneTmp;
 
-setTimeout(upDate, 5000);
+
 paintWindow(); 
 paintScoreBar();
 document.getElementById('btn').addEventListener('click',function(e){
@@ -87,6 +93,11 @@ function paintWindow(){
     context_back.strokeStyle = "white";
     context_back.stroke();
 }
+
+function newPhrase(){
+    var randomNumber = Math.floor(Math.random() * 3);
+    document.getElementById('text').innerHTML = quotes[randomNumber];
+}
 function Block(index){
     if(!eachState[index])
         eachState[index] = true;
@@ -140,7 +151,7 @@ function afterRight(index){
     myTiles[index].live = false;
     eachState[index] = false;
 }
-function upDate(){//"Meat of the program" Where everything is run lol.
+function upDate(){
     var i;
 
     var textWidth = context_score.measureText(myScore.toString()).width;
@@ -163,24 +174,12 @@ function upDate(){//"Meat of the program" Where everything is run lol.
     for(i = 0; i < numOfTiles; ++i){
         if( eachState[i] ){
             if(myTiles[i].y < 470 && myTiles[i].y >350){
-                switch(myTiles[i].keyCode){
-                    case 65: //A
-                        if(myTiles[i].x == 0)
-                            afterRight(i);
-                        break;
-                    case 83: //S
-                        if(myTiles[i].x == 75)
-                            afterRight(i);
-                        break;
-                    case 68: //D
-                    if(myTiles[i].x == 152)
+              switch(myTiles[i].keyCode){
+                    case 65: case 66:case 67: case 67:case 69: case 70:case 71: case 72:case 73: case 74:case 75: case 76:case 77: case 78:case 79: case 80:case 81: case 82:case 83: case 84:case 85: case 86:case 87: case 88:case 89: case 90:
                         afterRight(i);
-                    break;
-                    case 70: //F
-                    if(myTiles[i].x == 228)
-                        afterRight(i);
-                    break;       
+                        
                 }
+                
             }
             if(myTiles[i].y > 470){
                context.clearRect(myTiles[i].x,myTiles[i].y,70,120);
