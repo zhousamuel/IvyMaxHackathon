@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<!--CSS-->
-	<style>
-	html, body{
-		height:100%;
-		margin:0;
-		}
-	.home_body{
-		height:100%;
-		background-image:linear-gradient(to top, purple, pink);
-		background-repeat:no-repeat;
-		}	
-
-</style>
+    <title>Typing Tiles</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
 
 </head>
 
@@ -43,7 +28,7 @@ __________________________________________________
 |                                                 | 
 |_________________________________________________|
 -->
-    <h1 style="text-align: center;">The Typing Game</h1>
+    <h1 style="text-align: left;">The Typing Game</h1>
 <!-- use the table to maybe integrate the game into the website-->	
 	<table>
 
@@ -58,5 +43,16 @@ __________________________________________________
 
 	</table>
 	
+    <canvas id="score_bar" width="300" height="70" style="position: absolute; left:36%;top: 0;"></canvas>
+
+    <canvas id="background" width="300" height="600" style="position: absolute; top:70; left: 36%;" ></canvas>
+
+    <canvas id="piano" width="300" height="600" style="position: absolute; top:70; left: 36%;"></canvas>
+    
+
+    <div id="btn">
+        <span id="start_btn">START</span>
+    </div>
+   <script src="main.js"></script>
 </body>
 </html>
