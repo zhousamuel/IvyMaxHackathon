@@ -17,7 +17,23 @@
 		background-image:linear-gradient(to top, purple, pink);
 		background-repeat:no-repeat;
 		}	
-
+	.center{
+		margin-left:auto;
+		margin-right:auto;
+		border: 2px solid black;
+		}
+	.button{
+		display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+<!-- change color of the button here -->
+        color: #ffffff;
+        background-color: #7aa8b7;
+        border-radius: 6px;
+        outline: none;
+	}
+	
 </style>
 
 </head>
@@ -45,11 +61,11 @@ __________________________________________________
 -->
     <h1 style="text-align: center;">The Typing Game</h1>
 <!-- use the table to maybe integrate the game into the website-->	
-	<table>
+	<table class="center">
 
-		<tr>
-			<th>
-			<p>table is here</p>
+		<tr style = "height:600px;">
+			<th style = " width:750px;">
+	<!--this line is removeable--><p>game go here</p>
 			<div>
 		<!-- someone be a wizard and integrate the game in here, idk how to that-->
 			</div>
@@ -57,6 +73,12 @@ __________________________________________________
 		</tr>
 
 	</table>
+	
+	<!--
+	#add links to these buttons to the other html pages
+	#also add more buttons here if needed
+	 -->
+	<a class = "button"> About us</a>
 	
 </body>
 </html>
